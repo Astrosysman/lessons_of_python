@@ -25,9 +25,11 @@ def main():
 		person = Person(item['name'], item['surname'], item['age'])
 		print(person)
 
-	print('Oldest person - Name: {}, Surname: {}, Age: {}'.format(max(persons, key=lambda item: item['age'])['name'], max(persons, key=lambda item: item['age'])['surname'], max(persons, key=lambda item: item['age'])['age'],))
-	print('Yougest person - Name: {}, Surname: {}, Age: {}'.format(min(persons, key=lambda item: item['age'])['name'], min(persons, key=lambda item: item['age'])['surname'], min(persons, key=lambda item: item['age'])['age'],))
+	max_person_age = max(persons, key=lambda item: item['age'])
+	min_person_age = min(persons, key=lambda item: item['age'])
 
+	print('Oldest person - Name: {}, Surname: {}, Age: {}'.format(max_person_age['name'], max_person_age['surname'], max_person_age['age']))
+	print('Yongest person - Name: {}, Surname: {}, Age: {}'.format(min_person_age['name'], min_person_age['surname'], min_person_age['age']))
 
 
 if __name__ == "__main__":
